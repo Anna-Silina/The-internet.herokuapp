@@ -27,10 +27,17 @@ public class CheckBoxes {
         {
             checkBox1 = driver.findElement(By.cssSelector("[type=checkbox]:first-child"));
             checkBox2 = driver.findElement(By.cssSelector("[type=checkbox]:last-child"));
-            Assert.assertTrue(!checkBox1.isSelected());
+            if(!checkBox1.isSelected()){
+                checkBox1.click();
+            }
+            if(checkBox2.isSelected()){
+                checkBox2.click();
+            }
+
+            Assert.assertTrue(checkBox1.isSelected());
+            Assert.assertTrue(!checkBox2.isSelected());
+
         }
-
-
     }
             @AfterClass
             public void endTest() {
