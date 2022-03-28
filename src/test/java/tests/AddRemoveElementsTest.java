@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import sun.plugin.dom.core.Node;
 
-public class AddRemoveElements {
+public class AddRemoveElementsTest {
 
     public WebDriver driver;
     WebElement factual;
@@ -23,7 +23,7 @@ public class AddRemoveElements {
          driver = new ChromeDriver();
      }
      @Test
-     public void AddRemoveElementsTest() {
+     public void AddRemoveElements() {
          driver.get("http://the-internet.herokuapp.com/");
          driver.findElement(By.xpath("//button[text()='Add Element']")).click();
          driver.findElement(By.xpath("//button[text()='Add Element']")).click();
